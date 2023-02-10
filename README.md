@@ -1,11 +1,9 @@
 # SAST-2022-backendWoc
-SAST 2022 寒假大作战后端 demo
+SAST 2022 寒假大作战前端+后端 demo
 
-要求：
+完成情况：
 
-1、完成 UserController、AdminController 接口
-
-2、建立 GitHub 仓库并提交
+前端部分基本完成，后端部分还差第二部分（即jwt和返回格式统一，改来改去老是有bug，先放着没bug已完成部分），运行是从SAST-2022-backendWoc-forntendWoc\src\main\resources\login.html开始。
 
 文件结构：
 ```
@@ -23,7 +21,7 @@ SAST 2022 寒假大作战后端 demo
 │  │  │              └─service            service层
 │  │  └─resources                         用于存放资源文件、配置文件等
 │  │      ├─mapper                        存放mapper映射文件
-│  │      ├─static
+│  │      ├─static                        存放js,css,image文件
 │  │      └─templates
 │  └─test                                 测试专用文件夹
 │      └─java          
@@ -49,8 +47,6 @@ SAST 2022 寒假大作战后端 demo
                 └─demo
 
 ```
-
----
 
 数据库：
 ```sql
