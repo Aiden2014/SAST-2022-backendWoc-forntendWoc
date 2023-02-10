@@ -3,6 +3,7 @@ package com.sast.woc.service.impl;
 import com.sast.woc.entity.User;
 import com.sast.woc.mapper.UserMapper;
 import com.sast.woc.service.UserService;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Service;
 
 /**
@@ -23,7 +24,27 @@ public class UserServiceImpl implements UserService {
      * @return User
      */
     @Override
-    public User sample(String value) {
+    public String sample(String value) {
         return userMapper.sample(value);
+    }
+    @Override
+    public boolean delUser(String userName){
+        return userMapper.delUser(userName);
+    }
+    @Override
+    public User findUser(String userName){
+        return userMapper.findUser(userName);
+    }
+    @Override
+    public int addUser(User user){
+        return userMapper.addUser(user);
+    }
+    @Override
+    public String login(String userName,String password){
+        return userMapper.login(userName,password);
+    }
+    @Override
+    public void change(User user){
+        userMapper.change(user);
     }
 }

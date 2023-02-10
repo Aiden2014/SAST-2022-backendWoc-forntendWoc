@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link href="static/styles/loginStyle.css" rel="stylesheet">
+</head>
+<body onload="finish()">
+    <h1>管理系统</h1>
+    <div id="load">
+        <img src="static/images/oriLoading.gif" alt="loading" id="loadphoto"/>
+        <p>loading...</p>
+    </div>
+    <div>
+        <label id="label1">用户名：<input type="text" class="text-input" id="username" placeholder="用户名" ></label>
+        <label id="label2">密码：<input type="password" class="text-input" id="password" placeholder="密码" ></label>
+    </div>
+    <button id="submit" onclick="submit()">登录</button>
+    <script src="static/scripts/login.js" defer></script>
+</body>
+</html>

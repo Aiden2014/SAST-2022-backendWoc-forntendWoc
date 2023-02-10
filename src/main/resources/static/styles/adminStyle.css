@@ -1,0 +1,79 @@
+html{
+    background-color: black;
+}
+#loadphoto{
+    width: 128px;
+    height: 128px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 50%;
+    transform: translateX(-50%);
+}
+h1{
+    color:white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top:-150px;
+}
+label{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+}
+#userName{
+    margin-top: -90px;
+    margin-left: -8px;
+}
+#password{
+    margin-top: -45px;
+}
+#role{
+    margin-top: 45px;
+}
+input{
+    color:white;
+    background-color: transparent;
+    padding: 10px;
+    border:1px solid transparent;
+    border-bottom:2px solid white;
+}
+button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top:100px;
+    background-color: white;
+    padding: 7px 20px;
+}
+#add{
+    margin-left: -120px;
+}
+#del{
+    margin-left: -40px;
+}
+#change{
+    margin-left: 40px;
+}
+#search{
+    margin-left: 120px;
+}
+#advice{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: -120px;
+    margin-left: 400px;
+    color: white;
+    background-color: gray;
+}

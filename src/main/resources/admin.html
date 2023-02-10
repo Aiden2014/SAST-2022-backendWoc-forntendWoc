@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin</title>
+    <link href="static/styles/adminStyle.css" rel="stylesheet">
+</head>
+<body onload="finish()">
+    <h1>管理系统</h1>
+    <div id="load">
+        <img src="static/images/oriLoading.gif" alt="loading" id="loadphoto"/>
+        <p>loading...</p>
+    </div>
+    <div class="table-body">
+        <table>
+            <thead>
+                <tr>
+                    <td>用户名</td>
+                    <td>密码</td>
+                    <td>邮箱</td>
+                    <td>身份</td>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+
+            </tbody>
+        </table>
+    </div>
+    <form action="javascript;">
+        <div style="display: flex; flex-direction: column">
+            <label id="userName">用户名：<input type="text" id="usernametext" placeholder="输入用户名" /></label>
+            <label id="password">密码：<input type="text" id="passwordtext" placeholder="输入密码" /></label>
+            <label id="email">邮箱：<input type="text" id="emailtext" placeholder="输入邮箱" /></label>
+        </div>
+    </form>
+    <div>
+        <button id="add" onclick="add()">添加</button>
+        <button id="del" onclick="del()">删除</button>
+        <button id="change" onclick="change()">修改</button>
+        <button id="search" onclick="search()">查找</button>
+    </div><!-- button不能放在form里面，不然点击按钮会出错 -->
+    <div id="advice">
+        <h2>使用建议</h2>
+        <p>1.在添加用户之前，建议先点查找看看有无重复名。</p>
+        <p>2.在删除用户之前，只需要输入用户名，建议先点查找确认要删除的用户信息。</p>
+        <p>3.在查找时，只需要输入用户名。</p>
+        <p>4.在修改用户时，建议先查找得到用户信息再来改，而且不能修改用户名。</p>
+    </div>
+    <script src="static/scripts/admin.js" defer></script>
+</body>
+</html>
