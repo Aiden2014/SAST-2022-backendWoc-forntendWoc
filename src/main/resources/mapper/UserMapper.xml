@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.sast.woc.mapper.UserMapper">
-    <select id="sample" parameterType="String" resultType="String">
---         注意，这里这个sql语句只是示例
-        SELECT `user_name` FROM `user` WHERE `user_name` =#{value};
-    </select>
     <delete id="delUser" parameterType="String">
         DELETE FROM `user` WHERE `user_name`=#{userName};
     </delete>

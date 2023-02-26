@@ -5,7 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * @Author xun
+ * @Author xun&&Aiden2014
  * @create 2022/12/26 14:31
  */
 // Lombok 的注解：不需要我们写构造器和 Getter Setter 方法。
@@ -17,4 +17,5 @@ public class User {
     private String userName;
     private String password;
     private String email;
+    private Integer role;
 }

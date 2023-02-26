@@ -6,14 +6,12 @@ import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 /**
- * @Author xun
+ * @Author xun&&Aiden2014
  * @create 2022/12/26 14:47
  */
 @Mapper
 @Repository
 public interface UserMapper {
-    // 示例，可以去resources->mapper中查看UserMapper.xml文件的内容。
-    String sample(@Param("value") String value);
     boolean delUser(@Param("userName") String userName);
     User findUser(@Param("userName") String userName);
     int addUser(User user);

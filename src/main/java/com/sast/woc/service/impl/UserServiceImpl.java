@@ -7,7 +7,7 @@ import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Service;
 
 /**
- * @Author xun
+ * @Author xun&&Aiden2014
  * @create 2023/1/3 16:35
  */
 @Service
@@ -16,16 +16,6 @@ public class UserServiceImpl implements UserService {
 
     public UserServiceImpl(UserMapper userMapper) {
         this.userMapper = userMapper;
-    }
-
-    /**
-     * 这是sample方法的具体实现
-     * @param value value
-     * @return User
-     */
-    @Override
-    public String sample(String value) {
-        return userMapper.sample(value);
     }
     @Override
     public boolean delUser(String userName){

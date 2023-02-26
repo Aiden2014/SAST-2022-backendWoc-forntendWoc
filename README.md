@@ -1,11 +1,9 @@
 # SAST-2022-backendWoc
-SAST 2022 寒假大作战后端 demo
+SAST 2022 寒假大作战前端+后端 demo
 
-要求：
+完成情况：
 
-1、完成 UserController、AdminController 接口
-
-2、建立 GitHub 仓库并提交
+前端部分差数据统一接入完成，后端部分已完成（写的一拖四）。迟点再更新前端的
 
 文件结构：
 ```
@@ -15,15 +13,20 @@ SAST 2022 寒假大作战后端 demo
 │  ├─main                                 main目录为主要编写代码的区域
 │  │  ├─java                              用于存放代码
 │  │  │  └─com
-│  │  │      └─example
-│  │  │          └─demo
+│  │  │      └─sast
+│  │  │          └─woc
+│  │  │              ├─config             存放设置
 │  │  │              ├─controller         controller层
 │  │  │              ├─entity             存放基础的实体类
+│  │  │              ├─exception          管理token抛出的异常
+│  │  │              ├─filter             过滤器
+│  │  │              ├─interceptor        拦截器
 │  │  │              ├─mapper             mapper层（也叫dao层）
-│  │  │              └─service            service层
+│  │  │              ├─service            service层
+│  │  │              └─util               创建和验证token
 │  │  └─resources                         用于存放资源文件、配置文件等
 │  │      ├─mapper                        存放mapper映射文件
-│  │      ├─static
+│  │      ├─static                        存放js,css,image文件
 │  │      └─templates
 │  └─test                                 测试专用文件夹
 │      └─java          
@@ -49,8 +52,6 @@ SAST 2022 寒假大作战后端 demo
                 └─demo
 
 ```
-
----
 
 数据库：
 ```sql
