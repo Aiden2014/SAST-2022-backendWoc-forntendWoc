@@ -3,7 +3,7 @@ SAST 2022 寒假大作战前端+后端 demo
 
 完成情况：
 
-前端部分基本完成，后端部分还差第二部分（即jwt和返回格式统一，改来改去老是有bug，先放着没bug已完成部分），运行是从SAST-2022-backendWoc-forntendWoc\src\main\resources\login.html开始。
+前端部分差数据统一接入完成，后端部分已完成（写的一拖四）。迟点再更新前端的
 
 文件结构：
 ```
