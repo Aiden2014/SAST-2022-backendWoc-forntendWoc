@@ -30,7 +30,9 @@ public class Myfilter implements Filter {
         //如果这个路径是过滤路径则直接返回
         if (isFilter(request)){
             log.info("{}不需要过滤",request.getRequestURI());
+            System.out.println(servletRequest.getParameter("userName"));
             filterChain.doFilter(servletRequest,servletResponse);
+            System.out.println(request.getParameter("password"));
         }else{
             try {
             final HttpServletResponse response = (HttpServletResponse) servletResponse;

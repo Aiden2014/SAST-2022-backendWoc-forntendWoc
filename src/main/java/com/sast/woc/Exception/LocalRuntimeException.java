@@ -1,4 +1,4 @@
-package com.sast.woc.Exception;
+package com.sast.woc.exception;
 
 import lombok.Data;
 

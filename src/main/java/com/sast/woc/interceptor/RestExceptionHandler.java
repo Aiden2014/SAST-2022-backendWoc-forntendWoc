@@ -21,16 +21,16 @@ public class RestExceptionHandler {
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     public ResultData<String> exception(Exception e) {
         if(e.getMessage()=="token不能为空"||e.getMessage()=="token不合法"){
-            return ResultData.fail(ReturnCode.INVALID_TOKEN.getCode(),e.getMessage());
+            return ResultData.fail(ReturnCode.RC401.getCode(),e.getMessage());
         }
         if(e.getMessage()=="操作失败"){
-            return ResultData.fail(ReturnCode.RC999.getCode(),e.getMessage());
+            return ResultData.fail(ReturnCode.RC404.getCode(),e.getMessage());
         }
         if(e.getMessage()=="用户名或密码错误"){
-            return ResultData.fail(ReturnCode.USERNAME_OR_PASSWORD_ERROR.getCode(),e.getMessage());
+            return ResultData.fail(ReturnCode.RC401.getCode(),e.getMessage());
         }
         if(e.getMessage()=="无权限"){
-            return ResultData.fail(ReturnCode.ACCESS_DENIED.getCode(),e.getMessage());
+            return ResultData.fail(ReturnCode.RC403.getCode(),e.getMessage());
         }
         log.error("全局异常信息 ex={}", e.getMessage(), e);
         return ResultData.fail(ReturnCode.RC500.getCode(),e.getMessage());
