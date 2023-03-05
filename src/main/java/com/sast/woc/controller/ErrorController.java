@@ -21,7 +21,6 @@ public class ErrorController {
      */
     @RequestMapping("/errorToken")
     public void errorToken(HttpServletRequest request){
-        System.out.println(request);
         throw ((RuntimeException) request.getAttribute("filter.error"));
     }
 }

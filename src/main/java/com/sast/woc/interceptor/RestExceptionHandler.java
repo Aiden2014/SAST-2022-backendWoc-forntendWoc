@@ -32,7 +32,6 @@ public class RestExceptionHandler {
         if(e.getMessage()=="无权限"){
             return ResultData.fail(ReturnCode.RC403.getCode(),e.getMessage());
         }
-        log.error("全局异常信息 ex={}", e.getMessage(), e);
         return ResultData.fail(ReturnCode.RC500.getCode(),e.getMessage());
     }
 }

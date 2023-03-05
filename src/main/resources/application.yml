@@ -13,12 +13,3 @@ mybatis:
   mapper-locations: classpath:mapper/*.xml
   configuration:
     map-underscore-to-camel-case: true
-
-config:
-  jwt:
-    # 加密密钥
-    secret: abcdefg1234567
-    # token有效时长
-    expire: 3600
-    # header 名称
-    header: token

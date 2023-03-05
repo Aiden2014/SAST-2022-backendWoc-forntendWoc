@@ -12,11 +12,10 @@ import java.util.Map;
 
 //过滤器
 @Slf4j
-public class Myfilter implements Filter {
+public class MyFilter implements Filter {
     private String[] noFilters;
     @Override
     public void init(FilterConfig filterConfig){
-        log.info("启动过滤器");
         // 初始化不过滤的路径
         String noFilter = filterConfig.getInitParameter("noFilter");
         if(noFilter != null && noFilter.length() > 0){
@@ -29,10 +28,7 @@ public class Myfilter implements Filter {
         final HttpServletRequest request = (HttpServletRequest) servletRequest;
         //如果这个路径是过滤路径则直接返回
         if (isFilter(request)){
-            log.info("{}不需要过滤",request.getRequestURI());
-            System.out.println(servletRequest.getParameter("userName"));
             filterChain.doFilter(servletRequest,servletResponse);
-            System.out.println(request.getParameter("password"));
         }else{
             try {
             final HttpServletResponse response = (HttpServletResponse) servletResponse;
@@ -75,6 +71,5 @@ public class Myfilter implements Filter {
     @Override
     public void destroy(){
         jakarta.servlet.Filter.super.destroy();
-        log.info("终止");
     }
 }

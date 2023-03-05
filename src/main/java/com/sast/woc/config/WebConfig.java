@@ -1,7 +1,7 @@
 package com.sast.woc.config;
 
 
-import com.sast.woc.filter.Myfilter;
+import com.sast.woc.filter.MyFilter;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -11,8 +11,8 @@ import org.springframework.web.servlet.config.annotation.*;
 @Configuration
 public class WebConfig {
     @Bean
-    public FilterRegistrationBean<Myfilter> filterRegistrationBean(){
-        FilterRegistrationBean<Myfilter> registrationBean = new FilterRegistrationBean<>(new Myfilter());
+    public FilterRegistrationBean<MyFilter> filterRegistrationBean(){
+        FilterRegistrationBean<MyFilter> registrationBean = new FilterRegistrationBean<>(new MyFilter());
         // 过滤所有路径
         registrationBean.addUrlPatterns("/*");
         // 添加不过滤路径

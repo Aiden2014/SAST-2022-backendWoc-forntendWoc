@@ -46,9 +46,6 @@ public class UserController {
      */
     @PostMapping("/login")
     public Token login(@RequestParam(defaultValue = "") String userName, @RequestParam(defaultValue = "") String password) {
-        System.out.println(userName);
-        System.out.println(password);
-        System.out.println("cnm");
         if(userService.login(userName,password)!=null){
             User user = userService.findUser(userName);
             String token = JwtUtil.createToken(user);
